@@ -8,7 +8,7 @@ document.querySelectorAll("[esborrar]").forEach(button => {
     if (response.ok) {
       button.closest("[manga]").remove();
     } else {
-      alert("No s'ha eliminat el manga");
+      alert("No s'ha pogut eliminar el manga");
     }
   });
 });

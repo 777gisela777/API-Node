@@ -10,22 +10,22 @@ function readData() {
 
 router.get('/mangas/new', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 	res.render('create_manga', { manga: { name: '', author: '', year: '' } });
 });
 
 router.get('/mangas/:id/edit', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 	const data = readData();
 	const manga = data.mangas.find(item => String(item.id) === req.params.id);
-	if (!manga) return res.status(404).send('Manga no encontrado');
+	if (!manga) return res.status(404).send('Manga no trobat');
 	res.render('edit_manga', { manga });
 });
 
 router.get('/mangas', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 
 	const data = readData();
 	res.render('mangas', { user, data });
@@ -33,13 +33,13 @@ router.get('/mangas', (req, res) => {
 
 router.delete('/mangas/:id', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 
 	try {
 		const data = readData();
 		const mangas = data.mangas.filter(manga => String(manga.id) !== req.params.id);
 		if (mangas.length === data.mangas.length) {
-			return res.status(404).send('Manga no encontrado');
+			return res.status(404).send('Manga no trobat');
 		}
 
 		data.mangas = mangas;
@@ -52,13 +52,13 @@ router.delete('/mangas/:id', (req, res) => {
 
 router.put('/mangas/:id', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 
 	try {
 		const data = readData();
 		const mangaIndex = data.mangas.findIndex(manga => String(manga.id) === req.params.id);
 		if (mangaIndex === -1) {
-			return res.status(404).send('Manga no encontrado');
+			return res.status(404).send('Manga no trobat');
 		}
 
 		data.mangas[mangaIndex] = { ...data.mangas[mangaIndex], ...req.body };

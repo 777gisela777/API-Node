@@ -20,13 +20,13 @@ newBookForm?.addEventListener('submit', async event => {
         });
 
         if (!response.ok) throw new Error(await response.text());
-        newBookSpan.innerText = 'Libro creado correctamente';
+        newBookSpan.innerText = 'Llibre creat correctament';
         newBookSpan.style.color = 'green';
         setTimeout(() => {
             window.location.href = '/books';
         }, 1000);
     } catch (error) {
-        newBookSpan.innerText = error.message || 'Error al crear el libro';
+        newBookSpan.innerText = error.message || 'Error al crear el llibre';
         newBookSpan.style.color = 'red';
     }
 });

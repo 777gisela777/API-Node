@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login and registration</title>
+    <title>Login i registre</title>
     <!--link rel="stylesheet" href="styles.css" /-->
     <script src="/js/auth.js" defer></script>
   </head>
@@ -12,41 +12,41 @@
         <% if (typeof username!='undefined' ) { %>
             <div class="form-container">
                 <h2>Hola <%=username%>!</h2>
-                <p>Estás en el panel de admin</p>
+                <p>Estàs al panel d'administració</p>
                 <button><a href="/books">Administrar libros</a></button>
                 <button><a href="/mangas">Administrar mangas</a></button>
-                <button id="close-session">Cerrar sesión</button>
+                <button id="close-session">Tancar sessió</button>
             </div>
         <% } %>
 
         <% if (typeof username==='undefined' ) { %>
             <div class="form-container">
                 <form id="login-form">
-                    <h2>Login</h2>
-                    <label for="login-username">Username:</label>
+                    <h2>Inici de sessió</h2>
+                    <label for="login-username">Nom d'usuari:</label>
                     <input type="text" id="login-username" name="username" required>
 
-                    <label for="login-password">Password</label>
+                    <label for="login-password">Contrasenya:</label>
                     <input type="password" id="login-password" name="password" required>
 
-                    <button type="submit">Login</button>
+                    <button type="submit">Iniciar sessió</button>
                     <span>&nbsp;</span>
                 </form>
             </div>
 
             <div class="form-container">
                 <form id="register-form">
-                    <h2>Register</h2>
-                    <label for="register-username">Username:</label>
+                    <h2>Registre</h2>
+                    <label for="register-username">Nom d'usuari:</label>
                     <input type="text" id="register-username" name="username" required>
 
-                    <label for="register-password">Password</label>
+                    <label for="register-password">Contrasenya:</label>
                     <input type="password" id="register-password" name="password" required>
 
-                    <label for="register-confirm-password">Password</label>
+                    <label for="register-confirm-password">Confirmar contrasenya:</label>
                     <input type="password" id="register-confirm-password" name="confirm-password" required>
 
-                    <button type="submit">Register</button>
+                    <button type="submit">Registrar-se</button>
                     <span>&nbsp;</span>
                 </form>
             </div>

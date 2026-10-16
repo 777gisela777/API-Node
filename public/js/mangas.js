@@ -20,7 +20,7 @@ newMangaForm?.addEventListener('submit', async event => {
         });
 
         if (!response.ok) throw new Error(await response.text());
-        newMangaSpan.innerText = 'Manga creado correctamente';
+        newMangaSpan.innerText = 'Manga creat correctament';
         newMangaSpan.style.color = 'green';
         setTimeout(() => {
             window.location.href = '/mangas';

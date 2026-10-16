@@ -8,7 +8,7 @@ document.querySelectorAll("[esborrar]").forEach(button => {
     if (response.ok) {
       button.closest("[llibre]").remove();
     } else {
-      alert("No s'ha eliminat el llibre");
+      alert("No s'ha pogut eliminar el llibre");
     }
   });
 });

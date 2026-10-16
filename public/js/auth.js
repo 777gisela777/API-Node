@@ -17,8 +17,8 @@ loginForm?.addEventListener('submit', async event => {
             body: JSON.stringify({ username, password })
         });
 
-        if (!response.ok) throw new Error('Error al iniciar sesión');
-        loginSpan.innerText = 'Sesión iniciada correctamente. Entrando...';
+        if (!response.ok) throw new Error('Error al iniciar sessió');
+        loginSpan.innerText = 'Sessió iniciada! Entrant...';
         loginSpan.style.color = 'green';
         window.location.href = '/protected';
     } catch (error) {
@@ -34,7 +34,7 @@ registerForm?.addEventListener('submit', async event => {
     const confirmPassword = $('#register-confirm-password').value;
 
     if (password !== confirmPassword) {
-        registerSpan.innerText = 'Las contraseñas no coinciden';
+        registerSpan.innerText = 'Les contrasenyes no coincideixen';
         registerSpan.style.color = 'red';
         return;
     }
@@ -48,7 +48,7 @@ registerForm?.addEventListener('submit', async event => {
 
         if (!registerResponse.ok) throw new Error(await registerResponse.text());
 
-        registerSpan.innerText = 'Usuario registrado. Entrando...';
+        registerSpan.innerText = 'Usuari registrat. Entrant...';
         registerSpan.style.color = 'green';
         setTimeout(() => {
             window.location.href = '/protected';

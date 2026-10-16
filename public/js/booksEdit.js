@@ -20,7 +20,7 @@ editBookForm?.addEventListener('submit', async event => {
         if (!response.ok) throw new Error(await response.text());
         window.location.href = '/books';
     } catch (error) {
-        editBookMessage.textContent = error.message || 'No se pudo guardar el libro.';
+        editBookMessage.textContent = error.message || 'No s\'han pogut desar els canvis';
         editBookMessage.style.color = 'red';
     }
 });

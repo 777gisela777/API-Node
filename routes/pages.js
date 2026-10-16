@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 
 router.get('/protected', (req, res) => {
     const { user } = req.session;
-    if (!user) return res.status(403).send('No autorizado');
+    if (!user) return res.status(403).send('No autoritzat');
 
     res.render('register', user);
 });

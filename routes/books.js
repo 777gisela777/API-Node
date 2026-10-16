@@ -10,22 +10,22 @@ function readData() {
 
 router.get('/books/new', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 	res.render('create_book', { book: { name: '', author: '', year: '' } });
 });
 
 router.get('/books/:id/edit', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 	const data = readData();
 	const book = data.books.find(item => String(item.id) === req.params.id);
-	if (!book) return res.status(404).send('Libro no encontrado');
+	if (!book) return res.status(404).send('Llibre no trobat');
 	res.render('edit_book', { book });
 });
 
 router.get('/books', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 
 	const data = readData();
 	res.render('books', { user, data });
@@ -33,13 +33,13 @@ router.get('/books', (req, res) => {
 
 router.delete('/books/:id', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 
 	try {
 		const data = readData();
 		const books = data.books.filter(book => String(book.id) !== req.params.id);
 		if (books.length === data.books.length) {
-			return res.status(404).send('Libro no encontrado');
+			return res.status(404).send('Llibre no trobat');
 		}
 
 		data.books = books;
@@ -52,13 +52,13 @@ router.delete('/books/:id', (req, res) => {
 
 router.put('/books/:id', (req, res) => {
 	const { user } = req.session;
-	if (!user) return res.status(403).send('No autorizado');
+	if (!user) return res.status(403).send('No autoritzat');
 
 	try {
 		const data = readData();
 		const bookIndex = data.books.findIndex(book => String(book.id) === req.params.id);
 		if (bookIndex === -1) {
-			return res.status(404).send('Libro no encontrado');
+			return res.status(404).send('Llibre no trobat');
 		}
 
 		data.books[bookIndex] = { ...data.books[bookIndex], ...req.body };
