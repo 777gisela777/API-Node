@@ -3,6 +3,8 @@ import { Router } from 'express';
 const router = Router();
 
 router.get('/', (req, res) => {
+    if (req.session.user) return res.redirect('/protected');
+
     res.render('register', {});
 });
 
