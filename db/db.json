@@ -1,16 +1,224 @@
 {
-    "books": [
-        {
-            "id": 1,
-            "name": "Los 7 hábitos de la gente altamente efectiva",
-            "author": "Stephen R. Covey",
-            "year": 1989
-        },
-        {
-            "id": 2,
-            "name": "Padre rico, padre pobre",
-            "author": "Robert Kiyosaki",
-            "year": 1997
-        }
-    ]
+  "books": [
+    {
+      "id": 1,
+      "name": "Los 7 hábitos de la gente altamente efectiva",
+      "author": "Stephen R. Covey",
+      "year": 1989
+    },
+    {
+      "id": 2,
+      "name": "Padre rico, padre pobre",
+      "author": "Robert Kiyosaki",
+      "year": 1997
+    },
+    {
+      "id": 3,
+      "name": "El hombre en busca de sentido",
+      "author": "Viktor Frankl",
+      "year": 1946
+    },
+    {
+      "id": 4,
+      "name": "El poder del ahora",
+      "author": "Eckhart Tolle",
+      "year": 1997
+    },
+    {
+      "id": 5,
+      "name": "Los secretos de la mente millonaria",
+      "author": "T. Harv Eker",
+      "year": 2005
+    },
+    {
+      "id": 6,
+      "name": "Cómo ganar amigos e influir sobre las personas",
+      "author": "Dale Carnegie",
+      "year": 1936
+    },
+    {
+      "id": 7,
+      "name": "El alquimista",
+      "author": "Paulo Coelho",
+      "year": 1988
+    },
+    {
+      "id": 8,
+      "name": "La magia del orden",
+      "author": "Marie Kondo",
+      "year": 2011
+    },
+    {
+      "id": 9,
+      "name": "El monje que vendió su Ferrari",
+      "author": "Robin Sharma",
+      "year": 1997
+    },
+    {
+      "id": 10,
+      "name": "Los pilares de la tierra",
+      "author": "Ken Follett",
+      "year": 1989
+    },
+    {
+      "id": 11,
+      "name": "1984",
+      "author": "George Orwell",
+      "year": 1949
+    },
+    {
+      "id": 12,
+      "name": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "year": 1967
+    },
+    {
+      "id": 13,
+      "name": "El gran Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "year": 1925
+    },
+    {
+      "id": 14,
+      "name": "Matar a un ruiseñor",
+      "author": "Harper Lee",
+      "year": 1960
+    },
+    {
+      "id": 15,
+      "name": "Orgullo y prejuicio",
+      "author": "Jane Austen",
+      "year": 1813
+    },
+    {
+      "name": "Libro de prueba",
+      "author": "Autor 1",
+      "year": "2001",
+      "id": 1792140256388
+    },
+    {
+      "name": "kjt4tij",
+      "author": "ijreitj3iº4",
+      "year": "4875",
+      "id": 1792141346743
+    },
+    {
+      "name": "willy",
+      "author": "rex",
+      "year": "394",
+      "id": 1792146802645,
+      "_method": "PUT"
+    }
+  ],
+  "mangas": [
+    {
+      "id": 1,
+      "name": "One Piece",
+      "author": "Eiichiro Oda",
+      "year": 1997
+    },
+    {
+      "id": 2,
+      "name": "Naruto",
+      "author": "Masashi Kishimoto",
+      "year": 1999
+    },
+    {
+      "id": 3,
+      "name": "Dragon Ball",
+      "author": "Akira Toriyama",
+      "year": 1984
+    },
+    {
+      "id": 4,
+      "name": "Attack on Titan",
+      "author": "Hajime Isayama",
+      "year": 2009
+    },
+    {
+      "id": 5,
+      "name": "Death Note",
+      "author": "Tsugumi Ohba",
+      "year": 2003
+    },
+    {
+      "id": 6,
+      "name": "Fullmetal Alchemist",
+      "author": "Hiromu Arakawa",
+      "year": 2001
+    },
+    {
+      "id": 7,
+      "name": "Bleach",
+      "author": "Tite Kubo",
+      "year": 2001
+    },
+    {
+      "id": 8,
+      "name": "My Hero Academia",
+      "author": "Kohei Horikoshi",
+      "year": 2014
+    },
+    {
+      "id": 9,
+      "name": "Tokyo Ghoul",
+      "author": "Sui Ishida",
+      "year": 2011
+    },
+    {
+      "id": 10,
+      "name": "One Punch Man",
+      "author": "ONE",
+      "year": 2009
+    },
+    {
+      "id": 11,
+      "name": "Demon Slayer",
+      "author": "Koyoharu Gotouge",
+      "year": 2016
+    },
+    {
+      "id": 12,
+      "name": "Black Clover",
+      "author": "Yūki Tabata",
+      "year": 2015
+    },
+    {
+      "id": 13,
+      "name": "Fairy Tail",
+      "author": "Hiro Mashima",
+      "year": 2006
+    },
+    {
+      "id": 14,
+      "name": "JoJo's Bizarre Adventure",
+      "author": "Hirohiko Araki",
+      "year": 1987
+    },
+    {
+      "id": 15,
+      "name": "Hunter x Hunter",
+      "author": "Yoshihiro Togashi",
+      "year": 1998
+    },
+    {
+      "name": "manga 1",
+      "author": "11111",
+      "year": "2844",
+      "id": 1792140874083
+    },
+    {
+      "name": "hola",
+      "author": "jejeç",
+      "year": "244",
+      "id": 1792141328635,
+      "_method": "PUT"
+    },
+    {
+      "name": "holalaaal",
+      "author": "kjdjiie",
+      "year": "93",
+      "id": 1792147857215
+    }
+  ]
 }

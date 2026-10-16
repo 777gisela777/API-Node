@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login and registration</title>
     <!--link rel="stylesheet" href="styles.css" /-->
-    <script src="./js/register.js" defer></script>
+    <script src="/js/auth.js" defer></script>
   </head>
   <body>
     <div class="container">
         <% if (typeof username!='undefined' ) { %>
             <div class="form-container">
                 <h2>Hola <%=username%>!</h2>
-                <p>Estas en el panel de admin</p>
+                <p>Estás en el panel de admin</p>
+                <button><a href="/books">Administrar libros</a></button>
+                <button><a href="/mangas">Administrar mangas</a></button>
                 <button id="close-session">Cerrar sesión</button>
-                <a href="/protected">Seguir administrando</a>
             </div>
         <% } %>
 

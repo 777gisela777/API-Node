@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Llibres</title>
+    <!--link rel="stylesheet" href="styles.css" /-->
+    <script src="/js/booksDelete.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+        <% if (typeof user !== 'undefined') { %>
+            <div class="form-container">
+                <h2>Llibres</h2>
+                <button><a href="/books/new">Afegir un llibre</a></button>
+                <% data.books.forEach(book => { %>
+                  <div llibre="<%= book.id %>">
+                    <p><strong><%= book.name %></strong> - <%= book.author %> (<%= book.year %>)</p>
+                    <a href="/books/<%= book.id %>/edit">Editar</a>
+                    <button type="button" esborrar="<%= book.id %>">Eliminar</button>
+                  </div>
+                <% }) %>
+                <a href="/protected">Tornar a la pàgina d'admin</a>
+            </div>
+        <% } %>
+    </div>
+    
+  </body>
+</html>
